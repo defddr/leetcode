@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "007ReverseIntenger", "007Re
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "083RemoveDuplicatesFromSortedList", "083RemoveDuplicatesFromSortedList\083RemoveDuplicatesFromSortedList.vcxproj", "{A7A4012C-5DC8-4455-B274-1BAC9BC29AFF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "004MedianOfTwoSortedArrays", "004MedianOfTwoSortedArrays\004MedianOfTwoSortedArrays.vcxproj", "{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{A7A4012C-5DC8-4455-B274-1BAC9BC29AFF}.Release|x64.Build.0 = Release|x64
 		{A7A4012C-5DC8-4455-B274-1BAC9BC29AFF}.Release|x86.ActiveCfg = Release|Win32
 		{A7A4012C-5DC8-4455-B274-1BAC9BC29AFF}.Release|x86.Build.0 = Release|Win32
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Debug|x64.ActiveCfg = Debug|x64
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Debug|x64.Build.0 = Debug|x64
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Debug|x86.ActiveCfg = Debug|Win32
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Debug|x86.Build.0 = Debug|Win32
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Release|x64.ActiveCfg = Release|x64
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Release|x64.Build.0 = Release|x64
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Release|x86.ActiveCfg = Release|Win32
+		{D10A4053-6BA7-4958-B518-1EFB3EC7F77F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
