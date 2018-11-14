@@ -4,6 +4,7 @@
 #include "pch.h"
 #include <iostream>
 #include <vector>
+#include <assert.h>
 
 using namespace std;
 
@@ -36,27 +37,54 @@ using namespace std;
 int removeDuplicates(vector<int>& nums) {
 	if (nums.size() < 2)
 		return nums.size();
-	const int compare_limit = 2;
-	int comp_count = 0;
-	int comp_num = nums[0];
 	int idx = 0;
-	for (int i = 0; i < nums.size(); i++) {
-	
+	int count = 0;
+	for (int i = 1; i < nums.size(); i++) {
+		if (nums[i] < nums[idx]) {
+			nums[i] = nums[idx++];
+		}
+
+		if (nums[i] == nums[i - 1]) {
+			count++;
+			if (count > 1) {
+				while (idx < nums.size()) {
+					if (nums[idx] > nums[i])
+						break;
+					else
+						idx++;
+				}
+
+				if (idx < nums.size()) {
+					nums[i] = nums[idx++];
+					count = 0;
+				}
+				else {
+					return i;
+				}
+			}
+		}
+		else if (nums[i] > nums[i - 1]) {
+			count = 0;
+		}
+
+		if (idx >= nums.size()) {
+			return i + 1;
+		}
 	}
 
-
-
-	return ;
-
+	return nums.size();
 }
 
 
 //[1,1,1,2,2,3]
+//[0,0,1,1,1,1,2,3,3]
 
 
 int main()
 {
-	vector<int> v{ 0,0,1,1,1,1,2,3,3 };
+	//vector<int> v{ 0,0,1,1,1,1,2,3,3 };
+	//vector<int> v{ 1,1,1,2,2,3 };
+	vector<int> v{ 1,1,1};
 	int i = removeDuplicates(v);
 }
 
