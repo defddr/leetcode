@@ -31,6 +31,7 @@ string reverseVowels(string s) {
 
 int main()
 {
+	reverseVowels("de");
     std::cout << "Hello World!\n"; 
 }
 

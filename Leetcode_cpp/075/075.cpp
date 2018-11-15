@@ -9,24 +9,26 @@ using namespace std;
 
 void sortColors(vector<int>& nums) {
 	int front = 0; int back = nums.size() - 1;
-	while (front <= back) {
-		while (front < nums.size() && nums[front] == 0)
+	while (front < back) {
+		if( nums[front] == 0)
 			front++;
-		while (back >= 0 && nums[back] != 0)
+		if( nums[back] != 0)
 			back--;
-		if (front < back) {
+		if (nums[front] != 0 && nums[back] == 0 && front < back ) {
 			std::swap(nums[front], nums[back]);
 			front++;
 			back--;
 		}
 	}
+
+
 	back = nums.size() - 1;
-	while (front <= back) {
-		while (front < nums.size() && nums[front] == 1)
+	while (front < back) {
+		if (nums[front] <= 1)
 			front++;
-		while (back >= 0  && nums[back] != 1)
+		if (nums[back] != 1)
 			back--;
-		if (front < back) {
+		if (nums[front] != 1 && nums[back] == 1 && front < back) {
 			std::swap(nums[front], nums[back]);
 			front++;
 			back--;
@@ -40,7 +42,7 @@ void sortColors(vector<int>& nums) {
 int main()
 {
 	//vector<int> v{ 2,2 };
-	vector<int> v{ 1,0,0 };
+	vector<int> v{ 1,2};
 	sortColors(v);
 }
 
